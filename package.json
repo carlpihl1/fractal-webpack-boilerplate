@@ -1,16 +1,21 @@
 {
   "name": "fractal-webpack-boilerplate",
   "version": "1.0.0",
-  "repository": "",
+  "repository": "https://github.com/supernaut/fractal-webpack-boilerplate",
+  "license": "MIT",
   "scripts": {
-    "stylelint": "stylelint assets/styles/**/*.scss --fix"
+    "stylelint": "stylelint assets/styles/**/*.scss --fix",
+    "stylelint-check": "stylelint-config-prettier-check",
+    "precommit": "pretty-quick --staged"
   },
   "dependencies": {
     "@frctl/fractal": "^1.1.7"
   },
   "devDependencies": {
     "fractal-webpack-plugin": "^2.0.1",
+    "husky": "^0.14.3",
     "prettier": "1.14.3",
+    "pretty-quick": "^1.7.0",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-sass-guidelines": "^5.2.0",
