@@ -1,0 +1,20 @@
+{
+  "name": "fractal-webpack-boilerplate",
+  "version": "1.0.0",
+  "repository": "",
+  "scripts": {
+    "stylelint": "stylelint assets/styles/**/*.scss --fix"
+  },
+  "dependencies": {
+    "@frctl/fractal": "^1.1.7"
+  },
+  "devDependencies": {
+    "fractal-webpack-plugin": "^2.0.1",
+    "prettier": "1.14.3",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-sass-guidelines": "^5.2.0",
+    "stylelint-scss": "^3.3.0",
+    "stylelint-selector-bem-pattern": "^2.0.0"
+  }
+}
