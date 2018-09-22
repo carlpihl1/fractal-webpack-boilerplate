@@ -13,7 +13,7 @@ To start a local dev server that updates when either fractal content or assets (
 `npm run dev`
 
 To build files for deployment:<br>
-`npm run dev`
+`npm run build`
 
 ## What's in here
 
