@@ -1,13 +1,14 @@
 import 'whatwg-fetch';
-import { domReady, assetsBaseUrl } from './utils';
+import { assetsBaseUrl, domReady, requireAll } from './utils';
 
-function requireAll(r) {
-  r.keys().forEach(r);
-}
+// Require all icons to trigger svg-sprite-loader generating the sprite map
 requireAll(require.context('../icons/', true, /\.svg$/));
 
-domReady(() => {
-  // eslint-disable-next-line camelcase
+/**
+ * Attaches the generated sprite map to the document.
+ */
+const loadIcons = () => {
+  // Fetch generated sprite map and attach it to the document
   fetch(`${assetsBaseUrl()}images/icons.svg`)
     .then(response => {
       if (!response.ok) {
@@ -21,4 +22,7 @@ domReady(() => {
       spriteWrapper.style.display = 'none';
       document.body.appendChild(spriteWrapper);
     });
-});
+};
+
+// Execute icon load when DOM is ready
+domReady(loadIcons);

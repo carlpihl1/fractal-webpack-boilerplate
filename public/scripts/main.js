@@ -464,26 +464,27 @@
         (self.Headers = l),
         (self.Request = _),
         (self.Response = E));
-    var B, O;
-    (B = r(3)).keys().forEach(B),
-      (O = function() {
-        fetch(
-          ''.concat(
-            document.documentElement.dataset.assetsBaseUrl || '/',
-            'images/icons.svg'
-          )
+    var B;
+    (B = r(3)).keys().forEach(B);
+    var O;
+    (O = function() {
+      fetch(
+        ''.concat(
+          document.documentElement.dataset.assetsBaseUrl || '/',
+          'images/icons.svg'
         )
-          .then(function(t) {
-            if (!t.ok) throw Error(''.concat(t.statusText, ': ').concat(t.url));
-            return t.text();
-          })
-          .then(function(t) {
-            var e = document.createElement('div');
-            (e.innerHTML = t),
-              (e.style.display = 'none'),
-              document.body.appendChild(e);
-          });
-      }),
+      )
+        .then(function(t) {
+          if (!t.ok) throw Error(''.concat(t.statusText, ': ').concat(t.url));
+          return t.text();
+        })
+        .then(function(t) {
+          var e = document.createElement('div');
+          (e.innerHTML = t),
+            (e.style.display = 'none'),
+            document.body.appendChild(e);
+        });
+    }),
       (document.attachEvent
       ? 'complete' === document.readyState
       : 'loading' !== document.readyState)
